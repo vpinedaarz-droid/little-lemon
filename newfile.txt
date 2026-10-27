@@ -1,2 +1,4 @@
 este es el nuevo
-texto agregado
+texto agregad
+
+segudo texto agregadoo
