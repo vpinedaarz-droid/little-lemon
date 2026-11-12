@@ -91,7 +91,6 @@ import com.example.little_lemon.ui.theme.Typography
                     text = "Let's get to know you...",
                     fontSize = 25.sp, fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
-
                     color = Color.White,
                     style = Typography.headlineLarge,
                     modifier = Modifier.padding( start = 20.dp, end = 20.dp).
@@ -160,6 +159,7 @@ import com.example.little_lemon.ui.theme.Typography
                             .putString("nombre_usuario", nombre)
                             .putString("apellido_usuario", apellido)
                             .putString("correo_usuario", correo)
+                            .putBoolean("registrado", true)
                             .apply()
                         navController.navigate(Home.route)
 
