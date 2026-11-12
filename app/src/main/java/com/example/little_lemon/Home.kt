@@ -61,14 +61,8 @@ fun Home(navController : NavHostController,
     val databaseMenuItems by database.menuItemDao().getAll()
         .observeAsState(emptyList<MenuItemRoom>())
 
-    var orderMenuItems by remember {mutableStateOf(false)}
-    var menuItems : List<MenuItemRoom>
-    if (orderMenuItems ) {
-        menuItems = databaseMenuItems.sortedBy { it.title }
-    }
-    else {
-        menuItems = databaseMenuItems
-    }
+    var menuItems : List<MenuItemRoom> = databaseMenuItems
+
     if (tipoPlato != "") {
         menuItems =databaseMenuItems.filter { it.category == tipoPlato }
         if (filtro.length > 0 ) {
