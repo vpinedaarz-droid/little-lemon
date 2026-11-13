@@ -66,11 +66,11 @@ fun Home(navController : NavHostController,
     if (tipoPlato != "") {
         menuItems =databaseMenuItems.filter { it.category == tipoPlato }
         if (filtro.length > 0 ) {
-            menuItems = menuItems.filter { it.title.startsWith(filtro) }
+            menuItems = menuItems.filter { it.title.contains(filtro) }
         }
     } else {
         if (filtro.length> 0) {
-            menuItems = databaseMenuItems.filter { it.title.startsWith(filtro) }
+            menuItems = databaseMenuItems.filter { it.title.contains(filtro) }
         }
     }
 
